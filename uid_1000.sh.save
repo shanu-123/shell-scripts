@@ -1,0 +1,10 @@
+##! /bin/bash
+
+for i in `sudo cat /etc/passwd`
+do
+	name=`echo $i | cut -d ":" -f1,3`
+        if [[ $name -gt 1000 ]]
+	then
+		echo  $name
+        fi
+done
